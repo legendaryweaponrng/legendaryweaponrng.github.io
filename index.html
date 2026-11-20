@@ -41,7 +41,7 @@
 <style>
   :root { color-scheme: dark; }
   * { box-sizing: border-box; }
-  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: #0d0f14; color: #e8eaf0; line-height: 1.7; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: radial-gradient(1100px 520px at 50% -80px, #2c2356 0%, rgba(44,35,86,0) 62%), linear-gradient(180deg, #12141f 0, #0d0f14 520px); color: #e8eaf0; line-height: 1.7; }
   main { max-width: 880px; margin: 0 auto; padding: 40px 20px 80px; }
   .hero { text-align: center; padding: 24px 0 8px; }
   .hero .icon { width: 132px; height: 132px; border-radius: 26px; box-shadow: 0 8px 32px rgba(0,0,0,.55); }
@@ -52,6 +52,12 @@
   .play { display: inline-block; background: #ffd75e; color: #14161c; font-weight: 700; font-size: 1.1rem; padding: 14px 34px; border-radius: 10px; text-decoration: none; margin: 22px 0 6px; box-shadow: 0 6px 24px rgba(255,215,94,.25); }
   .play:hover { background: #ffe083; }
   .heroimg { display: block; margin: 30px auto 4px; width: min(400px, 86vw); border-radius: 14px; box-shadow: 0 12px 44px rgba(0,0,0,.6); }
+  .heroshot { display: block; width: 100%; margin: 28px 0 4px; border-radius: 16px; border: 1px solid #2a3042; box-shadow: 0 14px 48px rgba(0,0,0,.55); }
+  .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; margin-top: 16px; }
+  .shots figure { margin: 0; background: #12151d; border: 1px solid #232836; border-radius: 12px; overflow: hidden; }
+  .shots img { width: 100%; display: block; }
+  .shots figcaption { padding: 9px 12px; font-size: .92rem; color: #c9cedb; }
+  .shots figcaption b { color: #fff; }
   .stats { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 26px 0 2px; }
   .stats span { background: #171b25; border: 1px solid #262b38; border-radius: 999px; padding: 6px 16px; font-weight: 600; font-size: .95rem; }
   .stats b { color: #ffd75e; }
@@ -75,8 +81,8 @@
     <h1>Legendary Weapon RNG</h1>
     <p class="tagline">A hack-and-slash RPG on Roblox where every weapon drops from an enemy you defeated.</p>
     <p class="sub">Legendary Weapon RNG is a free-to-play Roblox RPG made by a solo developer. You fight through areas full of enemies, and the weapons those enemies drop become your arsenal. If you want a stronger weapon, you go and take it from something stronger.</p>
-    <a class="play" href="https://www.roblox.com/games/124951815167262/Legendary-Weapon-RNG">▶ Play on Roblox (free)</a>
-    <img class="heroimg" src="img/hero_endcard.png" alt="Legendary Weapon RNG — collect them all: a glowing legendary weapon surrounded by orbiting light">
+    <a class="play" href="https://www.roblox.com/games/124951815167262/Legendary-Weapon-RNG">Play on Roblox (free)</a>
+    <img class="heroshot" src="img/hero_game.jpg" alt="In-game screenshot: a huge ornate double axe and other weapons float at the FORGE, ready to be upgraded">
     <div class="stats">
       <span><b>500+</b> weapons</span>
       <span><b>20</b> rarities</span>
@@ -84,7 +90,22 @@
       <span><b>AFK</b> auto-battle for everyone</span>
     </div>
   </div>
-
+  <h2>Inside the game</h2>
+  <p>Real screenshots from the game — no renders, no mock-ups. This is what you drop into.</p>
+  <div class="shots">
+    <figure>
+      <img src="img/shot_forge.jpg" alt="In-game: a legendary double axe floats above the FORGE furnace">
+      <figcaption><b>The FORGE</b> — upgrade your weapons</figcaption>
+    </figure>
+    <figure>
+      <img src="img/shot_combat.jpg" alt="In-game: weapons fight on their own against enemies in the desert area">
+      <figcaption><b>Desert area</b> — your weapons battle on their own</figcaption>
+    </figure>
+    <figure>
+      <img src="img/shot_hub.jpg" alt="In-game: the hub, with the FORGE entrance and your arsenal on display">
+      <figcaption><b>The hub</b> — where every hunt starts</figcaption>
+    </figure>
+  </div>
   <h2>The arsenal</h2>
   <p>Every weapon below is an original design from the game — and in game, none of them are handed to you. Each one drops from an enemy. Chase them all, absorb the spares into your CORE, and keep only the best.</p>
   <div class="gallery">
@@ -97,10 +118,6 @@
       <figcaption><b>Sirius</b> — trident</figcaption>
     </figure>
     <figure>
-      <img src="img/weapon_axe.jpg" alt="A light-blue double-bladed axe mounted at the FORGE" style="object-position: top">
-      <figcaption><b>Double axe</b> — mounted at the FORGE</figcaption>
-    </figure>
-    <figure>
       <img src="img/weapon_eclipse.png" alt="Eclipse — a scythe wreathed in a glowing ring">
       <figcaption><b>Eclipse</b> — scythe, 1 in 10,000,000 class</figcaption>
     </figure>
@@ -109,7 +126,6 @@
       <figcaption><b>Gemma</b> — staff</figcaption>
     </figure>
   </div>
-
   <h2>How it plays</h2>
   <ol>
     <li><strong>Fight</strong> — Battle enemies and bosses across a chain of areas, including HARD difficulty tiers.</li>
@@ -118,7 +134,6 @@
     <li><strong>Push further</strong> — Stronger weapons open stronger areas, whose enemies drop even better weapons.</li>
   </ol>
   <p>Your weapons float around you and fight on their own, so the hunt continues hands-free: AFK auto-battle is a core system for every player, not a paid perk. Sessions can be active boss hunts or long idle grinds — both move you forward.</p>
-
   <h2>Key features</h2>
   <ul>
     <li><strong>500+ weapons</strong>, each with its own power — no two drops are ever exactly the same</li>
@@ -131,7 +146,6 @@
     <li><strong>Weekend events</strong> — boosted LUCK and drop rates</li>
     <li><strong>Solo developed</strong> and actively updated; saves and purchases are permanent</li>
   </ul>
-
   <h2>FAQ</h2>
   <div class="faq">
     <p><strong>How do I get weapons?</strong><br>
@@ -152,7 +166,6 @@
     <p><strong>Who makes it?</strong><br>
     A solo developer (keppekicamp). Bug reports and feedback are welcome in the ZENMAI group on Roblox.</p>
   </div>
-
   <h2>Play now</h2>
   <ul>
     <li>Play on Roblox: <a href="https://www.roblox.com/games/124951815167262/Legendary-Weapon-RNG">Legendary Weapon RNG</a></li>
